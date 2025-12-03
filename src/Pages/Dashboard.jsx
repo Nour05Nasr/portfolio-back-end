@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import SideNav from '../Components/Layout/SideNav';
 import './Dashboard.css';
 
 const Dashboard = () => {
-    return ( <> 
-    Testtttttttttt
-    <h1>Testtttttttttttt</h1>
+    return ( <>
+    <SideNav />
     </> );
 }
  
