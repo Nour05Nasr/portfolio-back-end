@@ -5,7 +5,7 @@ import './NavCta.css';
 
 const NavCta = (props) => {
     return ( <>
-    <Link className='nav_cta' to='/LogIn'>
+    <Link className='nav_cta' to='/'>
         {props.cta}
         <img src={signout} alt="Sign Out icon" />
     </Link>
