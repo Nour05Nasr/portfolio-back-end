@@ -3,6 +3,7 @@
     /* padding: 4% 2%; */
     width: 220px;
     height: 100vh;
+    position: relative;
     float: left;
     display: flex;
     flex-direction: column;
@@ -14,6 +15,7 @@
 }
 .inner_nav{
     width: 96%;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -21,11 +21,7 @@ body{
 }
 .body_div{
     width: 80%;
-    padding: 0 3% 0 0;
     position: relative;
     float: right;
-    /* background-color: aliceblue; */
-}
-.width_1{
-    width: 100%;
+    background-color: aliceblue;
 }
