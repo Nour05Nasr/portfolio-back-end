@@ -1,6 +1,7 @@
 .nav_cta{
     display: flex;
-width: 80%;
+/* width: 80%; */
+width: 150px;
 padding: 6px;
 justify-content: center;
 align-items: center;
@@ -9,6 +10,7 @@ border-radius: 20px;
 background: White;
 color: var(--BG-color);
 text-align: center;
-font-family: var(--font2);
+font-family: var(--font_2);
+font-weight: 700;
 font-size: var(--p);
 }

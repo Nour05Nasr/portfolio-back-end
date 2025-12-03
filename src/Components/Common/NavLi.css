@@ -1,20 +1,19 @@
 .nav_li{
     display: flex;
-width: 140px;;
-padding: 0 1% 0 1.7%;
-align-items: center;
-gap: 4%;
+    width: 100%;;
+    padding: 0 1% 0 1.7%;
+    align-items: center;
+    justify-content: center;
+    gap: 4%;
 }
 .nav_li:hover{
-border-left: 2.655px solid #54F1E9;
+border-left: 4px solid #54F1E9;
 background: linear-gradient(92deg, rgba(84, 241, 233, 0.40) 0.24%, rgba(69, 87, 200, 0.40) 100%);
 }
 .nav_p{
-    color: var(--White, #FFF);
-text-align: center;
-font-family: Nunito;
-font-size: 17.703px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+    color: var(--main_color);
+    text-align: center;
+    font-family: var(--font_2);
+    font-size: 18px;
+    font-weight: 500;
 }
