@@ -1,14 +1,19 @@
 .nav_li{
-    display: flex;
-    width: 100%;;
-    padding: 0 1% 0 1.7%;
-    align-items: center;
-    justify-content: center;
-    gap: 4%;
+    width: 100%;
+    text-decoration: none;
+
 }
 .nav_li:hover{
 border-left: 4px solid #54F1E9;
 background: linear-gradient(92deg, rgba(84, 241, 233, 0.40) 0.24%, rgba(69, 87, 200, 0.40) 100%);
+}
+.left{
+    display: flex;
+    margin: 0 0 0 8%;
+    padding: 0 1% 0 1.7%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4%;
 }
 .nav_p{
     color: var(--main_color);

@@ -16,8 +16,8 @@ const SideNav = () => {
     <div className='side_nav'>
         <img src={logo} alt="NN Logo" />
         <div className='inner_nav'>
-        <NavLi title="Dshboard" url="/Analytics" img={icon1} />
-        <NavLi title="Analytics" img={icon2} />
+        <NavLi title="Dshboard" url="/" img={icon1} />
+        <NavLi title="Analytics" url="/Analytics" img={icon2} />
         <NavLi title="Categories" img={icon3} />
         <NavLi title="Projects" img={icon4} />
         <NavLi title="Pages" img={icon5} />
