@@ -13,4 +13,22 @@ text-align: center;
 font-family: var(--font_2);
 font-weight: 700;
 font-size: var(--p);
+text-decoration: none;
+}
+.nav_cta:hover{
+    display: flex;
+/* width: 80%; */
+width: 160px;
+padding: 6px;
+justify-content: center;
+align-items: center;
+gap: 4%;
+border-radius: 20px;
+background: White;
+color: var(--BG-color);
+text-align: center;
+font-family: var(--font_2);
+font-weight: 700;
+font-size: var(--p);
+text-decoration: none;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Dashboard from './Pages/Dashboard';
 import Analytics from './Pages/Analytics';
+import NourNasrLogInBackEnd from './Pages/NourNasrLogInBackEnd';
 import Error404 from './Pages/Error404';
 
 const RoutingApp = () => {
@@ -11,6 +12,7 @@ const RoutingApp = () => {
     <Routes>
         <Route path="/" element={<Dashboard />} />
         <Route path="/Analytics" element={<Analytics />} />
+        <Route path="/LogIn" element={<NourNasrLogInBackEnd />} />
 
         <Route path="*" element={<Error404 />} />
     </Routes>
