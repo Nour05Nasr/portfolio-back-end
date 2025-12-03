@@ -1,5 +1,5 @@
 .side{
-    width: 21%;
+    width: 24%;
     float: left;
     padding: 4% 2%;
     display: flex;
@@ -12,5 +12,6 @@ flex-direction: column;
 gap: 194.734px; */
 align-items: center;
 gap: 28.325px;
-background: rgba(100, 100, 100, 0.25);
+background-color: beige;
+/* background: rgba(100, 100, 100, 0.80); */
 }

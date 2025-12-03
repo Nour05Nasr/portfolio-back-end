@@ -1,0 +1,14 @@
+.nav_cta{
+    display: flex;
+width: 80%;
+padding: 6px;
+justify-content: center;
+align-items: center;
+gap: 4%;
+border-radius: 20px;
+background: White;
+color: var(--BG-color);
+text-align: center;
+font-family: var(--font2);
+font-size: var(--p);
+}
