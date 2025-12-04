@@ -6,7 +6,7 @@ import NavCta from '../Common/NavCta';
 import logo from '../../Assets/logo.svg';
 import "./Table.css";
 
-const PortfolioTable = ({project}) => {
+const Table = ({project}) => {
     const projects = [
 { id: "01", category: "UI/UX Design", title: "Artmento App", thumbnail:{logo} },
 { id: "05", category: "Graphic Design", title: "Urban Edge", thumbnail: {logo} },
@@ -18,13 +18,6 @@ const PortfolioTable = ({project}) => {
 return (
 <div className="table-container">
 
-
-{/* <div className="table-header flex_row">
-<h2>Projects Table</h2>
-<button className="add-project-btn"><Plus size={18} /> Add Project</button>
-</div> */}
-
-
 <div className="table-wrapper">
 <table>
 <thead>
@@ -34,7 +27,6 @@ return (
 <th className='title1'>Project Title</th>
 <th className='title1'>Project ID</th>
 <button className="add-project-btn"><Plus size={18} /> Add Project</button>
-{/* <th>Actions</th> */}
 </tr>
 </thead>
 
@@ -46,4 +38,4 @@ return (
 </div>
 );
 }
-export default PortfolioTable;
+export default Table;

@@ -1,16 +1,21 @@
 .filter-bar {
 display: flex;
+align-items: center;
+justify-content: start;
 gap: 12px;
 margin-bottom: 16px;
 flex-wrap: wrap;
 }
 
 
-.filter-button {
-padding: 8px 14px;
+.filter-btn {
+padding: 8px 12px;
 border-radius: 8px;
 border: 1px solid #d5d5d5;
-background: white;
+font-family: var(--font_2);
+color: var(--main_color);
+    background: rgba(100, 100, 100, 0.25);
+    backdrop-filter: blur(40px);
 cursor: pointer;
 font-size: 14px;
 font-weight: 500;
@@ -18,8 +23,13 @@ transition: 0.2s;
 }
 
 
-.filter-button.active,
-.filter-button:hover {
-border-color: #000;
-background: #eee;
+.filter-btn.active,
+.filter-btn:hover {
+    color: var(--bg_color);
+    background-color: var(--main_color);
+}
+
+.reset-filter {
+    font-family: var(--font_2);
+color: var(--main_color);
 }

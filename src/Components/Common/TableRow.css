@@ -1,12 +1,13 @@
 .table-row td {
-    width: 100%;
+    /* width: 100%; */
     padding: 14px;
     border-bottom: 1px solid #e6e6e6;
     color:  var(--main_color);
-    text-align: center;
+    text-align: start;
     font-family: var(--font_2);
     font-size: 20px;
     font-weight: 500;
+    /* gap: 40%; */
 }
 
 

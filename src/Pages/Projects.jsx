@@ -8,7 +8,7 @@ import './Projects.css';
 const Projects = () => {
     return ( <div className='projects-page'>
      <SideNav />
-      <div className='body_div projects-content'>
+      <div className='projects-content'>
         <FilterBar />
         <Table />
       </div>
