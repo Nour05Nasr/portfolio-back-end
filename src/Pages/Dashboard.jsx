@@ -11,8 +11,19 @@ const Dashboard = () => {
     <SideNav />
     <div className='body_div'>
     <img className='width_1' src={piechart} alt="" />
-    <img className='width_1' src={sales} alt="" />
+    <div className='card1'>
+        <div className='card_row'>
+          <h3 className='title1'>Website Visits</h3>
+         <select className="filter-btn"><option>October</option></select>
+        </div>
+        <img className='width_1' src={sales} alt="" />
+    </div>
+    <div className='card1'>
+        <div className='card_row'>
+          <h3 className='title1'>Visits Locations</h3>
+        </div>
     <img className='width_1' src={visits} alt="" />
+    </div>
     </div>
     </> );
 }

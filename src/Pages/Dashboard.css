@@ -21,12 +21,29 @@ body{
     background-size: cover;
 }
 .body_div{
-    width: 80%;
+    width: 100%;
     padding: 0 2.5% 0 0;
     position: relative;
-    float: right;
-    /* background-color: aliceblue; */
+    /* float: right; */
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    background-color: aliceblue;
 }
 .width_1{
     width: 100%;
+}
+.card1{
+    width: 100%;
+    height: auto;
+    padding:1% 2%;
+    border-radius: 16px;
+   align-self: stretch;
+    background: rgba(100, 100, 100, 0.25);
+    backdrop-filter: blur(40px);
+}
+.card_row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

@@ -1,27 +1,11 @@
-:root{
-    --h1: 4vw;
-    --h2: 2.2vw;
-    --h3: 1.8vw;
-    --p: 1.4vw;
-    --font_1: 'party vibes';
-    --font_2:  'Nunito', sans-serif;;
-    --bg_color: #150633;
-    --main_color: #ffffff;
-    --primary_color: #54F1E9;
-    --secondry_color: #4557C8;
-    --accent_color: #FB8B8F;
-  }
-body{
-    margin: 0;
-    padding: 0;
-    background-color: #150633;
-    background-image: url(./../Assets/bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.body_div{
-    width: 80%;
-    position: relative;
-    float: right;
-    background-color: aliceblue;
+.num{
+    width: 80px;
+    height: 80px;
+    padding: 0 3% 4%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background: linear-gradient(92deg, rgba(84, 241, 233, 1) 0.24%, rgba(69, 87, 200, 1) 100%);
 }
