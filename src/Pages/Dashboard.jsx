@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import SideNav from '../Components/Layout/SideNav';
+import PortfolioTable from '../Components/Layout/PortfolioTable';
 import ActionButton from '../Components/Common/ActionButton';
 import TableRow from '../Components/Common/TableRow';
 import piechart from '../Assets/piechart.png';
@@ -13,12 +14,13 @@ const Dashboard = () => {
     return ( <>
     <SideNav />
     <div className='body_div'>
-            <TableRow 
+    {/* <TableRow 
     thumbnail={logo}
     category='UI/UX Design'
     title='Artmento App'
     id='01'
-    />
+    /> */}
+    <PortfolioTable />
     <img className='width_1' src={piechart} alt="" />
     <img className='width_1' src={sales} alt="" />
     <img className='width_1' src={visits} alt="" />

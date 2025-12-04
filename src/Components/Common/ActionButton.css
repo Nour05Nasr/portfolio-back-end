@@ -16,7 +16,8 @@ transition: 0.2s ease;
 
 
 .action-button:hover {
-background: rgba(69%, 69%, 69%, 0.3);
+    background: rgba(176, 176, 176, 0.20);
+    backdrop-filter: blur(5px);
 }
 
 
