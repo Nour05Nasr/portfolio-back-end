@@ -23,12 +23,13 @@ body{
 .body_div{
     width: 100%;
     padding: 0 2.5% 0 0;
+    margin-top: 3%;
     position: relative;
     /* float: right; */
     display: flex;
     flex-direction: column;
     gap: 3vh;
-    background-color: aliceblue;
+    /* background-color: aliceblue; */
 }
 .width_1{
     width: 100%;
@@ -46,4 +47,14 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.chart{
+    position: absolute;
+    z-index: 2;
+}
+.relative{
+    position: relative;
+    display: flex;
+        align-items: center;
+    justify-content: center;
 }
