@@ -9,7 +9,7 @@ const TableRow = ({project}) => {
 { id: "01", category: "UI/UX Design", title: "Artmento App", thumbnail:{logo} },
 { id: "05", category: "Graphic Design", title: "Urban Edge", thumbnail: {logo} },
 { id: "01", category: "UI/UX Design", title: "Best For Juice", thumbnail: {logo} },
-{ id: "01", category: "UI/Motion Graphics", title: "EUI SU Social Mediaa", thumbnail: {logo} },
+{ id: "01", category: "UI/Motion Graphics", title: "EUI SU Social Media", thumbnail: {logo} },
 { id: "05", category: "Graphic Design", title: "AR Escape Room Web", thumbnail: {logo} },
 { id: "06", category: "Art Direction", title: "ITN TV OS", thumbnail: {logo} }
 ];

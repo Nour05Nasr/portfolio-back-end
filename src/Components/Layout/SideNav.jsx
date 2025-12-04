@@ -19,7 +19,7 @@ const SideNav = () => {
         <NavLi title="Dshboard" url="/Dashboard" img={icon1} />
         <NavLi title="Analytics" url="/Analytics" img={icon2} />
         <NavLi title="Categories" img={icon3} />
-        <NavLi title="Projects" img={icon4} />
+        <NavLi title="Projects" url="/Projects" img={icon4} />
         <NavLi title="Pages" img={icon5} />
         <NavLi title="Inbox" img={icon6} />
         <NavLi title="Profile" img={icon7} />

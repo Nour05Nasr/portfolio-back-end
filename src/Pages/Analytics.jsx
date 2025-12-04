@@ -15,19 +15,19 @@ const Dashboard = () => {
     return ( <>
     <SideNav />
     <div className='body_div'>
-        <div>
+        <div className='width_1'>
       <img src={gra1} alt="" />
       <img src={gra2} alt="" />
       <img src={gra3} alt="" />
       <img src={gra4} alt="" />
         </div>
-        <div>
-          <img src={status} alt="" />
-          <img src={analysis} alt="" />
+        <div className='width_1'>
+          <img  src={status} alt="" />
+          <img  src={analysis} alt="" />
         </div>
-       <img src={piechart} alt="" />
-       <img src={sales} alt="" />
-       <img src={visits} alt="" />
+       <img className='width_1' src={piechart} alt="" />
+       <img className='width_1' src={sales} alt="" />
+       <img className='width_1' src={visits} alt="" />
     </div>
     </> );
 }
