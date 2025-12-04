@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Helmet } from 'react-helmet';
 import me from '../Assets/me.png';
 import email from '../Assets/email.svg';
 import pass from '../Assets/pass.svg';
@@ -9,6 +10,13 @@ import './LogIn.css';
 
 const LogIn = () => {
     return ( <>
+    <Helmet>
+        <title>NourNasrBackEndLogIn</title>
+        <meta name="robots" content="noindex, nofollow"></meta>
+        <meta name="description" content="This is the about page" />
+        <meta property="og:title" content="LogIn" />
+    </Helmet>
+
     {/* <div className='flex_column'> */}
 <video className='mask1 video' autostart autoplay loop src={bgvideo}></video>
     <div className='login'>
