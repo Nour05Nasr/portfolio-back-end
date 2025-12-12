@@ -26,7 +26,7 @@ return (
     <TableTH title= 'Thumbnail' />
 <TableTH title= 'Category Title' />
 <TableTH title= 'Number of projects' />
-<button className="add-project-btn"><Plus size={18} />(props.Add)</button>
+<button className="add-project-btn"><Plus size={18} />Add Category</button>
 </tr>
 </thead>
 

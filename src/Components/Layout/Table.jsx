@@ -27,7 +27,7 @@ return (
 <TableTH title= 'project Title' />
 <TableTH title= 'Project Category' />
 <TableTH title= 'ID' />
-<button className="add-project-btn"><Plus size={18} />(props.Add)</button>
+<button className="add-project-btn"><Plus size={18} />Add Project</button>
 </tr>
 </thead>
 

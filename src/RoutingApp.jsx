@@ -8,6 +8,7 @@ import Categories from './Pages/Categories';
 import Pages from './Pages/Pages';
 import Profile from './Pages/Profile';
 import Inbox from './Pages/Inbox';
+import ProjectEditor from './Pages/ProjectEditor';
 import Error404 from './Pages/Error404';
 
 const RoutingApp = () => {
@@ -23,6 +24,7 @@ const RoutingApp = () => {
         <Route path="/Pages" element={<Pages />} />
         <Route path="/Profile" element={<Profile />} />
         <Route path="/Inbox" element={<Inbox />} />
+        <Route path="/ProjectEditor" element={<ProjectEditor />} />
 
         <Route path="*" element={<Error404 />} />
     </Routes>

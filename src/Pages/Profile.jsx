@@ -125,8 +125,6 @@ const Profile = () => {
             </div>
                 <h3 className='title1'>Your Storage</h3>
                 <p className='login_p'>Supervise your drive space in the easiest way</p>
-                <div>
-                </div>
                 </div>
                 <div className='card_row'>
                   <p className='login_p'>25.6 Gb</p>
