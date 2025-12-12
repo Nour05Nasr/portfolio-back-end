@@ -21,7 +21,7 @@ const Dashboard = () => {
                 <h1 className='h1'>99</h1>
                 </div>
                 <p className='title1'>Total Project Views</p>
-                <div className='flex_row'>
+                <div className='card_row'>
                 <img src={up} alt="" />
                 <p className='login_p'>4% (30 days)</p>
                 </div>
@@ -31,7 +31,7 @@ const Dashboard = () => {
                 <h1 className='h1'>08</h1>
                 </div>
                 <p className='title1'>Total Project Views</p>
-                <div className='flex_row'>
+                <div className='card_row'>
                 <img src={up} alt="" />
                 <p className='login_p'>4% (30 days)</p>
                 </div>
@@ -41,7 +41,7 @@ const Dashboard = () => {
                 <h1 className='h1'>40</h1>
                 </div>
                 <p className='title1'>Total Project Views</p>
-                <div className='flex_row'>
+                <div className='card_row'>
                 <img src={up} alt="" />
                 <p className='login_p'>4% (30 days)</p>
                 </div>
@@ -51,7 +51,7 @@ const Dashboard = () => {
                 <h1 className='h1'>65</h1>
                 </div>
                 <p className='title1'>Total Project Views</p>
-                <div className='flex_row'>
+                <div className='card_row'>
                 <img src={up} alt="" />
                 <p className='login_p'>4% (30 days)</p>
                 </div>
@@ -76,7 +76,7 @@ const Dashboard = () => {
         </div>
        <div className='card1'> 
                   <div className='card_row'>
-                <h3 className='title1'>Website Visits</h3>
+                <h3 className='title1'>Website Insights</h3>
               </div>
               <div className='card_row'>
                           <div className='flex_column'>

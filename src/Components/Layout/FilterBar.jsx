@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import "./FilterBar.css";
 
 const FilterBar = () => {

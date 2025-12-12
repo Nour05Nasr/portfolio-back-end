@@ -14,7 +14,7 @@ const Dashboard = () => {
     <div className='body_div'>
         <div className='card1'> 
             <div className='card_row'>
-          <h3 className='title1'>Website Visits</h3>
+          <h3 className='title1'>Website Insights</h3>
         </div>
         <div className='card_row'>
                     <div className='flex_column'>
