@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Plus } from "lucide-react";
 import {Link} from 'react-router-dom';
 import TableRow from '../Common/TableRow';
+import TableTH from '../Common/TableTH';
 import NavCta from '../Common/NavCta';
-import logo from '../../Assets/logo.svg';
+import logo from '../../Assets/logo.png';
 import "./Table.css";
 
 const Table = ({props}) => {
@@ -22,10 +23,10 @@ return (
 <table>
 <thead>
 <tr>
-<th className='title1'>(props.Thumbnail)</th>
-<th className='title1'>(Project.Category)</th>
-<th className='title1'>(Projec.Title)</th>
-<th className='title1'>(Project.ID)</th>
+<TableTH title= 'Thumbnail' />
+<TableTH title= 'project Title' />
+<TableTH title= 'Project Category' />
+<TableTH title= 'ID' />
 <button className="add-project-btn"><Plus size={18} />(props.Add)</button>
 </tr>
 </thead>

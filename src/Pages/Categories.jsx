@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SideNav from '../Components/Layout/SideNav';
-import Table from '../Components/Layout/Table';
+import Table2 from '../Components/Layout/Table2';
 import FilterBar from '../Components/Layout/FilterBar';
 import './Categories.css';
 
@@ -9,7 +9,7 @@ const Categories = () => {
      <SideNav />
       <div className='projects-content'>
         <FilterBar />
-        <Table />
+        <Table2 />
       </div>
     </div>);
 }
