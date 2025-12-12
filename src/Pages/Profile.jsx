@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import SideNav from '../Components/Layout/SideNav';
 import NavCta from '../Components/Common/NavCta';
+import Toggle from '../Components/Common/Toggle';
 import profilebg from '../Assets/profilebg.png';
 import me from '../Assets/me.png';
 import storage from '../Assets/storage.svg';
@@ -8,6 +9,19 @@ import social from '../Assets/social.svg';
 import './Profile.css';
 
 const Profile = () => {
+     const [settings, setSettings] = useState({
+    lightMode: false,
+    followEmail: true,
+    meetups: false,
+    contactEmail: true,
+    autoSignIn: false,
+    newsletter: true,
+  });
+
+  const handleToggle = (key) => {
+    setSettings({ ...settings, [key]: !settings[key] });
+  };
+
     return ( <div className='body_div2'>
     <SideNav />
     <div className='body_div'>
@@ -27,7 +41,41 @@ const Profile = () => {
             
             <div className='card1'>
               <h3 className='title1'>Settings</h3>
-              
+                   <Toggle
+        label="Light Mode"
+        checked={settings.lightMode}
+        onChange={() => handleToggle("lightMode")}
+      />
+
+      <Toggle
+        label="Email me when someone follows me"
+        checked={settings.followEmail}
+        onChange={() => handleToggle("followEmail")}
+      />
+
+      <Toggle
+        label="Meetups near my notifications"
+        checked={settings.meetups}
+        onChange={() => handleToggle("meetups")}
+      />
+
+      <Toggle
+        label="Email me when someone contacts me"
+        checked={settings.contactEmail}
+        onChange={() => handleToggle("contactEmail")}
+      />
+
+      <Toggle
+        label="Sign in automatically"
+        checked={settings.autoSignIn}
+        onChange={() => handleToggle("autoSignIn")}
+      />
+
+      <Toggle
+        label="Notify me when subscribed to my newsletter"
+        checked={settings.newsletter}
+        onChange={() => handleToggle("newsletter")}
+      />
             </div>
         </div>
 
@@ -39,31 +87,31 @@ const Profile = () => {
               <p className='login_p'>I’m a UI/UX Designer, Art Director, Graphic Designer and Front-End Developer. As a UI/UX designer I help to make your ideas come to life into an impactful visual identity, and user-friendly experiences. From branding walking through UI/UX Design to front-end development. I the between creativity and functionality. With experience in branding, UI/UX Design, and digital product design, I make designs that do not only look great but also make a real impact. </p>
              <div className='card_row'>
               <div className='card_column'>
-              <p className='title1'>Education</p>
+              <p className='label'>Education</p>
               <h6 className='login_p'>Egypt University of Informatics</h6>
               </div>
               <div className='card_column'>
-              <p className='title1'>Education</p>
-              <h6 className='login_p'>Egypt University of Informatics</h6>
-              </div>
-             </div>
-             <div className='card_row'>
-              <div className='card_column'>
-              <p className='title1'>Education</p>
-              <h6 className='login_p'>Egypt University of Informatics</h6>
-              </div>
-              <div className='card_column'>
-              <p className='title1'>Education</p>
+              <p className='label'>Education</p>
               <h6 className='login_p'>Egypt University of Informatics</h6>
               </div>
              </div>
              <div className='card_row'>
               <div className='card_column'>
-              <p className='title1'>Education</p>
+              <p className='label'>Education</p>
               <h6 className='login_p'>Egypt University of Informatics</h6>
               </div>
               <div className='card_column'>
-              <p className='title1'>Education</p>
+              <p className='label'>Education</p>
+              <h6 className='login_p'>Egypt University of Informatics</h6>
+              </div>
+             </div>
+             <div className='card_row'>
+              <div className='card_column'>
+              <p className='label'>Education</p>
+              <h6 className='login_p'>Egypt University of Informatics</h6>
+              </div>
+              <div className='card_column'>
+              <p className='label'>Education</p>
               <h6 className='login_p'>Egypt University of Informatics</h6>
               </div>
              </div>

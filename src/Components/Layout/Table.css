@@ -30,15 +30,6 @@ color: #555;
 border-bottom: none;
 }
 
-.title1{
-    color:  var(--main_color);
-    /* text-align: left; */
-    text-align: center;
-    font-family: var(--font_2);
-    font-size: 24px;
-    font-weight: 500;
-}
-
 .add-project-btn{
     width: 130px;
     border-radius: 20px;

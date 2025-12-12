@@ -3,6 +3,7 @@ import { Plus } from "lucide-react";
 import {Link} from 'react-router-dom';
 import TableRow from '../Common/TableRow';
 import NavCta from '../Common/NavCta';
+import TableTH from '../Common/TableTH';
 import logo from '../../Assets/logo.svg';
 import "./Table.css";
 
@@ -22,9 +23,9 @@ return (
 <table>
 <thead>
 <tr>
-<th className='title1'>Hero Img</th>
-<th className='title1'>Category Title</th>
-<th className='title1'>Number of projects</th>
+    <TableTH title= 'Thumbnail' />
+<TableTH title= 'Category Title' />
+<TableTH title= 'Number of projects' />
 <button className="add-project-btn"><Plus size={18} />(props.Add)</button>
 </tr>
 </thead>
