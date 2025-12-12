@@ -18,11 +18,11 @@ const SideNav = () => {
         <div className='inner_nav'>
         <NavLi title="Dshboard" url="/Dashboard" img={icon1} />
         <NavLi title="Analytics" url="/Analytics" img={icon2} />
-        <NavLi title="Categories" img={icon3} />
+        <NavLi title="Categories" url="/Categories" img={icon3} />
         <NavLi title="Projects" url="/Projects" img={icon4} />
-        <NavLi title="Pages" img={icon5} />
-        <NavLi title="Inbox" img={icon6} />
-        <NavLi title="Profile" img={icon7} />
+        <NavLi title="Pages" url="/Pages" img={icon5} />
+        <NavLi title="Inbox" url="/Inbox" img={icon6} />
+        <NavLi title="Profile" url="/Profile" img={icon7} />
         </div>
         <NavCta cta ="Sign Out" />
     </div>

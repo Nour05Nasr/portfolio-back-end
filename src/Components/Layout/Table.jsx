@@ -6,7 +6,7 @@ import NavCta from '../Common/NavCta';
 import logo from '../../Assets/logo.svg';
 import "./Table.css";
 
-const Table = ({project}) => {
+const Table = ({props}) => {
     const projects = [
 { id: "01", category: "UI/UX Design", title: "Artmento App", thumbnail:{logo} },
 { id: "05", category: "Graphic Design", title: "Urban Edge", thumbnail: {logo} },
@@ -22,11 +22,11 @@ return (
 <table>
 <thead>
 <tr>
-<th className='title1'>Thumbnail</th>
-<th className='title1'>Project Category</th>
-<th className='title1'>Project Title</th>
-<th className='title1'>Project ID</th>
-<button className="add-project-btn"><Plus size={18} /> Add Project</button>
+<th className='title1'>(props.Thumbnail)</th>
+<th className='title1'>(Project.Category)</th>
+<th className='title1'>(Projec.Title)</th>
+<th className='title1'>(Project.ID)</th>
+<button className="add-project-btn"><Plus size={18} />(props.Add)</button>
 </tr>
 </thead>
 

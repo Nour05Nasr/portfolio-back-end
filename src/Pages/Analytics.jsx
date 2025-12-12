@@ -11,7 +11,7 @@ import up from '../Assets/up.svg';
 import './Analytics.css';
 
 const Dashboard = () => {
-    return ( <>
+    return ( <div className='body_div2'>
     <SideNav />
        <div className='body_div'>
          <div className='width_1'>
@@ -137,7 +137,7 @@ const Dashboard = () => {
         <img className='width_1' src={visits} alt="" />
         </div>
         </div>
-    </> );
+    </div> );
 }
  
 export default Dashboard;

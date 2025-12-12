@@ -9,7 +9,7 @@ import bgvideo from '../Assets/bgvideo.mp4';
 import './LogIn.css';
 
 const LogIn = () => {
-    return ( <>
+    return ( <div className='body_login'>
     <Helmet>
         <title>NourNasrBackEndLogIn</title>
         <meta name="robots" content="noindex, nofollow"></meta>
@@ -46,7 +46,7 @@ const LogIn = () => {
     <video className='mask2 video' autostart autoplay loop src={bgvideo}></video>
     </div>
     {/* </div> */}
-    </> );
+    </div> );
 }
  
 export default LogIn;

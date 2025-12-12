@@ -9,7 +9,7 @@ import visits from '../Assets/visits.png';
 import './Dashboard.css';
 
 const Dashboard = () => {
-    return ( <>
+    return ( <div className='body_div2'>
     <SideNav />
     <div className='body_div'>
         <div className='card1'> 
@@ -76,7 +76,7 @@ const Dashboard = () => {
     <img className='width_1' src={visits} alt="" />
     </div>
     </div>
-    </> );
+    </div> );
 }
  
 export default Dashboard;

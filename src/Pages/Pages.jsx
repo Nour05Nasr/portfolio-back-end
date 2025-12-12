@@ -2,18 +2,16 @@ import React, { Component } from 'react';
 import SideNav from '../Components/Layout/SideNav';
 import Table from '../Components/Layout/Table';
 import FilterBar from '../Components/Layout/FilterBar';
-import './Projects.css';
+import './Pages.css';
 
-const Projects = () => {
+const Pages = () => {
     return ( <div className='body_div2'>
      <SideNav />
       <div className='projects-content'>
         <FilterBar />
-        <Table 
-        Thumbnail='Thumbnail'
-        />
+        <Table />
       </div>
     </div>);
 }
  
-export default Projects;
+export default Pages;

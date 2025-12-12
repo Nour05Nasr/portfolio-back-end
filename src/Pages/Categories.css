@@ -4,9 +4,10 @@
   /* background: blue; */
 }
 .projects-content {
-  width: 100%;
+
   padding: 30px;
   overflow-y: auto;
+
   display: flex;
   flex-direction: column;
   gap: 20px;
