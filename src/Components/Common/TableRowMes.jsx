@@ -5,19 +5,19 @@ import ActionButton from './ActionButton';
 import logo from '../../Assets/logo.svg';
 import "./TableRow.css";
 
-const TableRowCat = ({Category}) => {
+const TableRowMes = ({Message}) => {
         const [loading, setLoading] = useState(true);
-        const [Categories, setCategories] = useState(""); 
+        const [Messages, setMessages] = useState(""); 
 
             useEffect(() => {
                 
-                async function getAllCategories() {
-                    const res = await supabase.from("Categories").select("*");
-                    setCategories(res.data)
+                async function getAllMessages() {
+                    const res = await supabase.from("Messages").select("*");
+                    setMessages(res.data)
                     // console.log(res);
                     setLoading(false);
                 }  
-                getAllCategories();
+                getAllMessages();
             },[]);
 
 //     const projects = [
@@ -31,16 +31,15 @@ const TableRowCat = ({Category}) => {
 
 if (loading) return <p>Loading...</p>;
     return ( <>
-         {console.log(Categories)}
+         {console.log(Messages)}
         {
-         Categories.map((Category) =>{
+         Messages.map((Message) =>{
             return <tr className="table-row row2">
-<td>
-<img src={Category.Hero_img} alt="thumb" className="hero_img" />
-</td>
-{/* <td>{project.Category}</td> */}
-<td>{Category.Name}</td>
-<td>{Category.Number_of_projects}</td>
+<td>{Message.FirstName}</td>
+<td>{Message.LastName}</td>
+<td>{Message.Subject}</td>
+<td>{Message.Email}</td>
+<td>{Message.Date}</td>
 <td><ActionButton /></td>
 </tr>
             })}
@@ -48,4 +47,4 @@ if (loading) return <p>Loading...</p>;
 
 );
 }
-export default TableRowCat;
+export default TableRowMes;

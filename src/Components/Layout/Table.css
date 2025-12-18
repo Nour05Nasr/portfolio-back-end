@@ -1,3 +1,9 @@
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
 .table-container {
     width: 100%;
     border-radius: 10px;
@@ -17,7 +23,6 @@ font-size: 14px;
 color: #333;
 }
 
-
 .portfolio-table td {
 padding: 14px;
 border-bottom: 1px solid #e6e6e6;
@@ -31,7 +36,8 @@ border-bottom: none;
 }
 
 .add-project-btn{
-    width: 130px;
+    width: 140px;
+    /* padding: 4px 24px; */
     border-radius: 20px;
     color: var(--bg_color);
     font-family: var(--font_2);
@@ -41,5 +47,6 @@ border-bottom: none;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 6%;
+    gap: 3%;
 }
+

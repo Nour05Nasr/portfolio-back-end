@@ -36,8 +36,9 @@ if (loading) return <p>Loading...</p>;
          Projects.map((Project) =>{
             return <tr className="table-row row2">
 <td>
-<img src={project.Thumbnail} alt="thumb" className="thumb_img" />
+<img src={project.ThumbNail} alt="thumb" className="thumb_img" />
 </td>
+<td>{project.Title}</td>
 {/* <td>{project.Category}</td> */}
 <td>{project.Title}</td>
 <td>{project.Date}</td>

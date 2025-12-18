@@ -1,5 +1,5 @@
 .table-row td {
-    width: 30%;
+    /* width: 30%; */
     padding: 14px;
     border-bottom: 1px solid #e6e6e6;
     color:  var(--main_color);
@@ -15,8 +15,14 @@
 border-bottom: none;
 }
 
-.thumb_img{
-    width: 50%;
+.hero_img {
+  width: 50%;
+  border-radius: 6px;
+}
+
+.thumb_img {
+  width: 60%;
+  border-radius: 6px;
 }
 
 

@@ -45,6 +45,7 @@ return (<>
 <TableTH title= 'Thumbnail' />
 <TableTH title= 'project Title' />
 <TableTH title= 'Project Category' />
+<TableTH title= 'Date' />
 <TableTH title= 'ID' />
 <button className="add-project-btn"><Plus size={18} />Add Project</button>
 </tr>

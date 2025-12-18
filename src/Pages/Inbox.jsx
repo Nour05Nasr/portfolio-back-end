@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import SideNav from '../Components/Layout/SideNav';
-import Table from '../Components/Layout/Table';
+import Table4 from '../Components/Layout/Table4';
 import FilterBar from '../Components/Layout/FilterBar';
 import './Inbox.css';
 
@@ -9,7 +9,7 @@ const Inbox = () => {
      <SideNav />
       <div className='projects-content'>
         <FilterBar />
-        <Table />
+        <Table4 />
       </div>
     </div>);
 }
