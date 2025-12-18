@@ -46,63 +46,42 @@ const Profile = () => {
             <div className='card1 card_column'>
             <div className='card_row'>
                 </div>
-              <img className='width_1'  src={profilebg} alt="bg" />
               {/* <img className='me' src={me} alt="profile" /> */}
                   {
                     Profile.map((Profile) =>{
                       return <>
-           <div className='card_column2'>
+           <div className='card_column2 bottom'>
+                    <img src={Profile.Bgimg} className='width_1' alt="bg" />
                   <div>
                     <img src={Profile.Proimg} alt="thumb" className="me" />
                   </div>
-                  <h3 className="title1">{Profile.Name}</h3>
-                  <p className="login_p">{Profile.Title}</p>
+                  <h3 className="title1 no">{Profile.Name}</h3>
+                  <p className="login_p  no bottom">{Profile.Title}</p>
               </div>
                   </>
             })}
                   {/* <h3 className='title1'>Nour Nasr</h3> */}
                   {/* <p className='login_p'>UI/UX Designer</p> */}
-              <img  src={social} alt="" />
+                  <p className="login_p  no bottom">{Profile.Title}</p>
+                <img className='bottom' src={social} alt="" />
             </div>
 
-            
             <div className='card1'>
-              <h3 className='title1'>Settings</h3>
-                   <Toggle
-        label="Light Mode"
-        checked={settings.lightMode}
-        onChange={() => handleToggle("lightMode")}
-      />
-
-      <Toggle
-        label="Email me when someone follows me"
-        checked={settings.followEmail}
-        onChange={() => handleToggle("followEmail")}
-      />
-
-      <Toggle
-        label="Meetups near my notifications"
-        checked={settings.meetups}
-        onChange={() => handleToggle("meetups")}
-      />
-
-      <Toggle
-        label="Email me when someone contacts me"
-        checked={settings.contactEmail}
-        onChange={() => handleToggle("contactEmail")}
-      />
-
-      <Toggle
-        label="Sign in automatically"
-        checked={settings.autoSignIn}
-        onChange={() => handleToggle("autoSignIn")}
-      />
-
-      <Toggle
-        label="Notify me when subscribed to my newsletter"
-        checked={settings.newsletter}
-        onChange={() => handleToggle("newsletter")}
-      />
+                <div className=' card_column center'>
+            <div className='num2' >
+                <img className='h1' src={storage} />            
+            </div>
+                <h3 className='title1'>Your Storage</h3>
+                <p className='login_p'>Supervise your drive space in the easiest way</p>
+                </div>
+                <div className='card_row'>
+                  <p className='login_p'>25.6 Gb</p>
+                  <p className='login_p'>50 Gb</p>
+                </div>
+                <div className='load_div'>
+                <hr className='loader' />
+                <hr className='loader2' />
+                </div>
             </div>
         </div>
 
@@ -154,42 +133,82 @@ const Profile = () => {
              </div>
             </div>
             
-        {/* <div className='flex_column'> */}
-            <div className='card1'>
-                <div className=' card_column'>
-            <div className='num2' >
-                <img className='h1' src={storage} />            
+
+           <div className='card1'>
+              <h3 className='title1'>Settings</h3>
+      <Toggle
+        label="Light Mode"
+        checked={settings.lightMode}
+        onChange={() => handleToggle("lightMode")}
+      />
+
+      <Toggle
+        label="Email me when someone follows me"
+        checked={settings.followEmail}
+        onChange={() => handleToggle("followEmail")}
+      />
+
+      <Toggle
+        label="Meetups near my notifications"
+        checked={settings.meetups}
+        onChange={() => handleToggle("meetups")}
+      />
+
+      <Toggle
+        label="Email me when someone contacts me"
+        checked={settings.contactEmail}
+        onChange={() => handleToggle("contactEmail")}
+      />
+
+      <Toggle
+        label="Sign in automatically"
+        checked={settings.autoSignIn}
+        onChange={() => handleToggle("autoSignIn")}
+      />
+
+      <Toggle
+        label="Reply to messages automatically"
+        checked={settings.autoSignIn}
+        onChange={() => handleToggle("autoreplay")}
+      />
+
+      <Toggle
+        label="Notify me when subscribed to my newsletter"
+        checked={settings.newsletter}
+        onChange={() => handleToggle("newsletter")}
+      />
+
+      <Toggle
+        label="Delete messages automatically after 30 days"
+        checked={settings.newsletter}
+        onChange={() => handleToggle("delete")}
+      />
+
+      <Toggle
+        label="Sign out automatically"
+        checked={settings.lightMode}
+        onChange={() => handleToggle("signout")}
+      />
+
+      <Toggle
+        label="000"
+        checked={settings.newsletter}
+        onChange={() => handleToggle("delete")}
+      />
+
+      <Toggle
+        label="Light Mode"
+        checked={settings.lightMode}
+        onChange={() => handleToggle("lightMode")}
+      />
+
+      <Toggle
+        label="Delete messages automatically after 30 days"
+        checked={settings.newsletter}
+        onChange={() => handleToggle("delete")}
+      />
             </div>
-                <h3 className='title1'>Your Storage</h3>
-                <p className='login_p'>Supervise your drive space in the easiest way</p>
-                </div>
-                <div className='card_row'>
-                  <p className='login_p'>25.6 Gb</p>
-                  <p className='login_p'>50 Gb</p>
-                </div>
-                <div className='load_div'>
-                <hr className='loader' />
-                <hr className='loader2' />
-                </div>
-            </div>
-            <div className='card1'>
-                <div className=' card_column'>
-            <div className='num2' >
-                <img className='h1' src={storage} />            
-            </div>
-                <h3 className='title1'>Your Storage</h3>
-                <p className='login_p'>Supervise your drive space in the easiest way</p>
-                </div>
-                <div className='card_row'>
-                  <p className='login_p'>25.6 Gb</p>
-                  <p className='login_p'>50 Gb</p>
-                </div>
-                <div className='load_div'>
-                <hr className='loader' />
-                <hr className='loader2' />
-                </div>
-            </div>
-                   {/* </div> */}
+    
             </div>
         {/* </div> */}
                   </>

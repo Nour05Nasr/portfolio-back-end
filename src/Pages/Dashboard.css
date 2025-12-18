@@ -52,7 +52,7 @@ body{
     height: auto;
     padding:1% 2%;
     border-radius: 16px;
-   align-self: stretch;
+    align-self: stretch;
     background: rgba(100, 100, 100, 0.25);
     backdrop-filter: blur(40px);
 }

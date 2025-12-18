@@ -55,3 +55,12 @@ background: var(--Glass-color, #B0B0B0);
 .bottom{
     margin-bottom: 3%;
 }
+.me{
+    margin-top: -50%;
+}
+.no{
+    margin: 0;
+}
+.top1{
+    margin-top: 10%;
+}

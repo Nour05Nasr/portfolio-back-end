@@ -47,7 +47,7 @@ return (
 <tbody>
 {
  Categories.map((Category) =>{
-    return <TableRowCat key={Category.id} project={Category} />
+    return <TableRowCat  project={Category} />
     })}
 </tbody>
 </table>
