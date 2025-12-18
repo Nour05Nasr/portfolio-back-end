@@ -1,21 +1,35 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState  } from 'react';
 import { Plus } from "lucide-react";
 import {Link} from 'react-router-dom';
-import TableRow from '../Common/TableRow';
+import { supabase } from '../../Supabase';
+import TableRowCat from '../Common/TableRowCat';
 import NavCta from '../Common/NavCta';
 import TableTH from '../Common/TableTH';
 import logo from '../../Assets/logo.svg';
 import "./Table.css";
 
-const Table2 = ({props}) => {
-    const categories = [
-{ id: "01", title: "UI/UX Design", projects: "03", thumbnail:{logo} },
-{ id: "05", title: "Graphic Design", projects: "03", thumbnail: {logo} },
-{ id: "01", title: "UI/UX Design", projects: "03", thumbnail: {logo} },
-{ id: "01", title: "UI/Motion Graphics", projects: "03", thumbnail: {logo} },
-{ id: "05", title: "Graphic Design", projects: "03", thumbnail: {logo} },
-{ id: "06", title: "Art Direction", projects: "03", thumbnail: {logo} }
-];
+const Table2 = ({Category}) => {
+           const [loading, setLoading] = useState(true);
+            const [Categories, setCategories] = useState([]); 
+    
+                useEffect(() => {
+                    
+                    async function getAllCategories() {
+                        const res = await supabase.from("Categories").select("*");
+                        setCategories(res.data)
+                        console.log(res);
+                        setLoading(false);
+                    }  
+                    getAllCategories();
+                },[]);
+//     const categories = [
+// { id: "01", title: "UI/UX Design", projects: "03", thumbnail:{logo} },
+// { id: "05", title: "Graphic Design", projects: "03", thumbnail: {logo} },
+// { id: "01", title: "UI/UX Design", projects: "03", thumbnail: {logo} },
+// { id: "01", title: "UI/Motion Graphics", projects: "03", thumbnail: {logo} },
+// { id: "05", title: "Graphic Design", projects: "03", thumbnail: {logo} },
+// { id: "06", title: "Art Direction", projects: "03", thumbnail: {logo} }
+// ];
 return (
 <div className="table-container">
 
@@ -23,7 +37,7 @@ return (
 <table>
 <thead>
 <tr>
-    <TableTH title= 'Thumbnail' />
+<TableTH title= 'Thumbnail' />
 <TableTH title= 'Category Title' />
 <TableTH title= 'Number of projects' />
 <button className="add-project-btn"><Plus size={18} />Add Category</button>
@@ -31,7 +45,10 @@ return (
 </thead>
 
 <tbody>
-{categories.map((p, i) => <TableRow key={i} project={p} />)}
+{
+ Categories.map((Category) =>{
+    return <TableRowCat key={Category.id} project={Category} />
+    })}
 </tbody>
 </table>
 </div>

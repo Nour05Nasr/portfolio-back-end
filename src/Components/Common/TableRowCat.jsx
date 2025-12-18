@@ -5,19 +5,19 @@ import ActionButton from './ActionButton';
 import logo from '../../Assets/logo.svg';
 import "./TableRow.css";
 
-const TableRow = ({project}) => {
+const TableRowCat = ({Category}) => {
         const [loading, setLoading] = useState(true);
-        const [Projects, setProjects] = useState(""); 
+        const [Categories, setCategories] = useState(""); 
 
             useEffect(() => {
                 
-                async function getAllProjects() {
-                    const res = await supabase.from("Projects").select("*");
-                    setProjects(res.data)
+                async function getAllCategories() {
+                    const res = await supabase.from("Categories").select("*");
+                    setCategories(res.data)
                     // console.log(res);
                     setLoading(false);
                 }  
-                getAllProjects();
+                getAllCategories();
             },[]);
 
 //     const projects = [
@@ -31,17 +31,17 @@ const TableRow = ({project}) => {
 
 if (loading) return <p>Loading...</p>;
     return ( <>
-         {console.log(Projects)}
+         {console.log(Categories)}
         {
-         Projects.map((Project) =>{
+         Categories.map((Category) =>{
             return <tr className="table-row row2">
 <td>
-<img src={project.Thumbnail} alt="thumb" className="thumb_img" />
+<img src={Category.Hero_img} alt="thumb" className="thumb_img" />
 </td>
 {/* <td>{project.Category}</td> */}
-<td>{project.Title}</td>
-<td>{project.Date}</td>
-<td>{project.id}</td>
+<td>{Category.Name}</td>
+<td>{Category.Number_of_projects}</td>
+<td>{Category.id}</td>
 <td><ActionButton /></td>
 </tr>
             })}
@@ -49,4 +49,4 @@ if (loading) return <p>Loading...</p>;
 
 );
 }
-export default TableRow;
+export default TableRowCat;
