@@ -49,7 +49,7 @@ return (
 <tbody>
 {
  Messages.map((Message) =>{
-    return <TableRowMes key={Message.id} project={Message} />
+    return <TableRowMes key={Message.id} Message={Message} />
     })}
 </tbody>
 </table>

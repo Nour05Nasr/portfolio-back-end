@@ -7,7 +7,7 @@ import "./TableRow.css";
 
 const TableRowCat = ({Category}) => {
         const [loading, setLoading] = useState(true);
-        const [Categories, setCategories] = useState(""); 
+        const [Categories, setCategories] = useState([]); 
 
             useEffect(() => {
                 
@@ -19,16 +19,6 @@ const TableRowCat = ({Category}) => {
                 }  
                 getAllCategories();
             },[]);
-
-//     const projects = [
-// { id: "01", category: "UI/UX Design", title: "Artmento App", thumbnail:{logo} },
-// { id: "05", category: "Graphic Design", title: "Urban Edge", thumbnail: {logo} },
-// { id: "01", category: "UI/UX Design", title: "Best For Juice", thumbnail: {logo} },
-// { id: "01", category: "UI/Motion Graphics", title: "EUI SU Social Media", thumbnail: {logo} },
-// { id: "05", category: "Graphic Design", title: "AR Escape Room Web", thumbnail: {logo} },
-// { id: "06", category: "Art Direction", title: "ITN TV OS", thumbnail: {logo} }
-// ];
-
 if (loading) return <p>Loading...</p>;
     return ( <>
          {console.log(Categories)}

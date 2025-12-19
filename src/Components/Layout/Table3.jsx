@@ -1,20 +1,27 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect, useState  } from 'react';
 import { Plus } from "lucide-react";
 import {Link} from 'react-router-dom';
-import TableRow from '../Common/TableRow';
+import { supabase } from '../../Supabase';
+import TableRowPag from '../Common/TableRowPag';
 import NavCta from '../Common/NavCta';
 import TableTH from '../Common/TableTH';
 import logo from '../../Assets/logo.svg';
 import "./Table.css";
 
-const Table3 = ({props}) => {
-    const categories = [
-{ id: "01", title: "Home", projects: "08", thumbnail:{logo} },
-{ id: "05", title: "About Me", projects: "03", thumbnail: {logo} },
-{ id: "01", title: "Portfolio", projects: "04", thumbnail: {logo} },
-{ id: "01", title: "Contact Me", projects: "02", thumbnail: {logo} },
-{ id: "05", title: "Blogs", projects: "03", thumbnail: {logo} }
-];
+const Table3 = ({Page}) => {
+           const [loading, setLoading] = useState(true);
+            const [Pages, setPages] = useState([]); 
+    
+                useEffect(() => {
+                    
+                    async function getAllPages() {
+                        const res = await supabase.from("Pages").select("*");
+                        setPages(res.data)
+                        console.log(res);
+                        setLoading(false);
+                    }  
+                    getAllPages();
+                },[]);
 return (
 <div className="table-container">
 
@@ -22,15 +29,18 @@ return (
 <table>
 <thead>
 <tr>
-    <TableTH title= 'Page Cover Img' />
+<TableTH title= 'Thumbnail' />
 <TableTH title= 'Page Title' />
-<TableTH title= 'Number of sections' />
+<TableTH title= 'Number of projects' />
 <button className="add-project-btn"><Plus size={18} />Add Page</button>
 </tr>
 </thead>
 
 <tbody>
-{categories.map((p, i) => <TableRow key={i} project={p} />)}
+{
+ Pages.map((Page) =>{
+    return <TableRowPag key={Page.id}  data={Page} />
+    })}
 </tbody>
 </table>
 </div>

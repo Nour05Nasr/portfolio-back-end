@@ -5,34 +5,29 @@ import ActionButton from './ActionButton';
 import logo from '../../Assets/logo.svg';
 import "./TableRow.css";
 
-const TableRow = ({project}) => {
+const TableRowPag = ({Page}) => {
         const [loading, setLoading] = useState(true);
-        const [Projects, setProjects] = useState([]); 
+        const [Pages, setPages] = useState([]); 
 
             useEffect(() => {
                 
-                async function getAllProjects() {
-                    const res = await supabase.from("Projects").select("*");
-                    setProjects(res.data)
+                async function getAllPages() {
+                    const res = await supabase.from("Pages").select("*");
+                    setPages(res.data)
                     // console.log(res);
                     setLoading(false);
                 }  
-                getAllProjects();
+                getAllPages();
             },[]);
 if (loading) return <p>Loading...</p>;
     return ( <>
-         {console.log(Projects)}
+         {console.log(Pages)}
         {
-         Projects.map((Project) =>{
+         Pages.map((Page) =>{
             return <tr className="table-row row2">
-<td>
-<img src={project.ThumbNail} alt="thumb" className="thumb_img" />
-</td>
-<td>{project.Title}</td>
-{/* <td>{project.Category}</td> */}
-<td>{project.Title}</td>
-<td>{project.Date}</td>
-<td>{project.id}</td>
+<td>{Page.Title}</td>
+<td>{Page.Name}</td>
+<td>{Page.Number_of_sections}</td>
 <td><ActionButton /></td>
 </tr>
             })}
@@ -40,4 +35,4 @@ if (loading) return <p>Loading...</p>;
 
 );
 }
-export default TableRow;
+export default TableRowPag;

@@ -7,7 +7,7 @@ import "./TableRow.css";
 
 const TableRowMes = ({Message}) => {
         const [loading, setLoading] = useState(true);
-        const [Messages, setMessages] = useState(""); 
+        const [Messages, setMessages] = useState([]); 
 
             useEffect(() => {
                 
