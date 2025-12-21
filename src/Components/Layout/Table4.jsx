@@ -30,6 +30,9 @@ const Table4 = ({Message}) => {
 // { id: "05", title: "Graphic Design", projects: "03", thumbnail: {logo} },
 // { id: "06", title: "Art Direction", projects: "03", thumbnail: {logo} }
 // ];
+
+
+if (loading) return <p>Loading...</p>;
 return (
 <div className="table-container">
 
@@ -49,7 +52,7 @@ return (
 <tbody>
 {
  Messages.map((Message) =>{
-    return <TableRowMes key={Message.id} Message={Message} />
+    return <TableRowMes key={Message.id} data={Message} />
     })}
 </tbody>
 </table>

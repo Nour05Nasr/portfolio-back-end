@@ -14,7 +14,7 @@ const TableRowMes = ({Message}) => {
                 async function getAllMessages() {
                     const res = await supabase.from("Messages").select("*");
                     setMessages(res.data)
-                    // console.log(res);
+                    console.log(res);
                     setLoading(false);
                 }  
                 getAllMessages();
@@ -32,17 +32,18 @@ const TableRowMes = ({Message}) => {
 if (loading) return <p>Loading...</p>;
     return ( <>
          {console.log(Messages)}
-        {
-         Messages.map((Message) =>{
-            return <tr className="table-row row2">
+  {
+ Messages.map((Message) =>{
+    let pathLink = "/messages-details/"+Message.id;
+    return <tr>
+        <Link to={pathLink}>{Message.id}</Link>
 <td>{Message.FirstName}</td>
 <td>{Message.LastName}</td>
 <td>{Message.Subject}</td>
 <td>{Message.Email}</td>
 <td>{Message.Date}</td>
-<td><ActionButton /></td>
-</tr>
-            })}
+    </tr>
+    })}
     </>
 
 );

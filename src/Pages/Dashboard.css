@@ -53,15 +53,10 @@ body{
     padding:1% 2%;
     border-radius: 16px;
     align-self: stretch;
-    background: rgba(100, 100, 100, 0.25);
-    backdrop-filter: blur(40px);
-}
-.card2{
-    width: 100%;
-    height: auto;
-    padding:1% 2%;
-    border-radius: 16px;
-   align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
     background: rgba(100, 100, 100, 0.25);
     backdrop-filter: blur(40px);
 }
@@ -85,4 +80,81 @@ body{
     display: flex;
         align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --h1: 5vw;
+    --h2: 3.2vw;
+    --h3: 2.6vw;
+    --p: 2.2vw;
+  }
+
+  .body_div
+  .body_div2 {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    gap: 4vh;
+    padding: 0;
+  }
+
+  .card1{
+    width: 80%;
+    align-items: center;
+  }
+
+  .card_row {
+    flex-wrap: wrap;
+    gap: 2vh;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --h1: 8vw;
+    --h2: 5.5vw;
+    --h3: 4.5vw;
+    --p: 4vw;
+  }
+
+  body {
+    background-position: center;
+  }
+
+  .body_div,
+  .body_div2 {
+    width: 100%;
+    float: none;
+    padding: 0;
+    margin-top: 5%;
+    flex-direction: column;
+    gap: 3vh;
+  }
+
+  .card1{
+    width: 60%;
+    padding: 4% 5%;
+    border-radius: 14px;
+  }
+
+  .card_row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5vh;
+  }
+
+  .card_column {
+    width: 100%;
+  }
+
+  .chart {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .relative {
+    flex-direction: column;
+  }
 }
