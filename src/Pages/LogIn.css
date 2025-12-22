@@ -86,3 +86,10 @@ border: 2px solid var(--White, #FFF);
     justify-content: center;
     /* gap: 2; */
 }
+
+@media (max-width: 1024px) {
+    .flex_row{
+        flex-direction: column;
+        gap: 3vh;
+}
+}

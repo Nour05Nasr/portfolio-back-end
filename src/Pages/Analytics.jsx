@@ -63,7 +63,7 @@ const Dashboard = () => {
                                 <div className='card_row'>
               <h3 className='title1'>Live Portfolio Status</h3>
             </div>
-          <img  src={status} alt="" />
+          <img className='width_1' src={status} alt="" />
                    </div>
                    <div className='card1'>
                                 <div className='card_row'>
