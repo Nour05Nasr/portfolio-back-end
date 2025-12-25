@@ -25,6 +25,7 @@ const InboxSub = (params) => {
 if (loading) return <p>Loading...</p>;
     return ( <div className='body_div2'>
      <SideNav />
+     <div className='body_div'>
       <div className='content'>
         <div className='card_1'>
       <h3 className='title1' >{Messages.FullName}</h3>
@@ -38,6 +39,7 @@ if (loading) return <p>Loading...</p>;
                <p className='login_p'>Enter Your Reply</p>
             </div>
       </div>
+     </div>
     </div>);
 }
  

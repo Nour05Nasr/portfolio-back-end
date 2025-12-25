@@ -35,7 +35,7 @@ if (loading) return <p>Loading...</p>;
     <Link to={"/InboxSub/" + Message.id}>
 <button className='action-button'><Eye size={18} /></button>
     </Link>
-{/* <td><ActionButton /></td> */}
+<td><ActionButton /></td>
     </tr>
     })}
     </>
