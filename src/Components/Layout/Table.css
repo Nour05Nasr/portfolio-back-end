@@ -75,10 +75,12 @@ table {
   align-items: center;
   justify-content: center;
   gap: 6px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .head{
-  
+
 }
 
 @media (max-width: 1024px) {

@@ -37,7 +37,11 @@ return (<>
 <TableTH title= 'Project Category' />
 <TableTH title= 'Date' />
 <TableTH title= 'ID' />
-<button className="add-project-btn"><Plus size={18} />Add Project</button>
+<td>
+    <Link  className="add-project-btn" to={"/CreateProject"}>
+        <button className="add-project-btn"><Plus size={18} />Add Project</button>
+    </Link>
+</td>
 </tr>
 </thead>
 

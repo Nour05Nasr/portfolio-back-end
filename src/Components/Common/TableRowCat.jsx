@@ -38,7 +38,7 @@ if (loading) return <p>Loading...</p>;
 <td>{Category.Number_of_projects}</td>
 <td>
     <div className='action-buttons'>
-    <Link to={"/CategoryEditor/" + Category.id}>
+    <Link to={"/CategoryViewer/" + Category.id}>
         <button className='action-button'><Eye size={18} /></button>
     </Link>
     <Link to={"CategoryEditor/" + Category.id}>

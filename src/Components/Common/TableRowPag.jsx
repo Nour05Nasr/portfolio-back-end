@@ -35,10 +35,10 @@ if (loading) return <p>Loading...</p>;
 <td>{Page.History}</td>
 <td>
     <div className='action-buttons'>
-    <Link to={"/PageEditor/" + Page.id}>
+    <Link to={"/PageViewer/" + Page.id}>
         <button className='action-button'><Eye size={18} /></button>
     </Link>
-    <Link to={"PagetEditor/" + Page.id}>
+    <Link to={"PageEditor/" + Page.id}>
         <button className='action-button'><Edit size={18} /></button>
     </Link>
      <button onClick={()=>deleteRow(Page.id)}  className="action-button delete"><Trash2 size={18} /></button>
