@@ -20,28 +20,21 @@ const TableRowMes = ({Message}) => {
                 getAllMessages();
             },[]);
 
-//     const projects = [
-// { id: "01", category: "UI/UX Design", title: "Artmento App", thumbnail:{logo} },
-// { id: "05", category: "Graphic Design", title: "Urban Edge", thumbnail: {logo} },
-// { id: "01", category: "UI/UX Design", title: "Best For Juice", thumbnail: {logo} },
-// { id: "01", category: "UI/Motion Graphics", title: "EUI SU Social Media", thumbnail: {logo} },
-// { id: "05", category: "Graphic Design", title: "AR Escape Room Web", thumbnail: {logo} },
-// { id: "06", category: "Art Direction", title: "ITN TV OS", thumbnail: {logo} }
-// ];
-
 if (loading) return <p>Loading...</p>;
     return ( <>
          {console.log(Messages)}
   {
  Messages.map((Message) =>{
-    let pathLink = "/messages-details/"+Message.id;
-    return <tr>
-        <Link to={pathLink}>{Message.id}</Link>
-<td>{Message.FirstName}</td>
-<td>{Message.LastName}</td>
-<td>{Message.Subject}</td>
+    // let pathLink = "/messages-details/" + Message.id;
+    return <tr key={Message.id}  className="table-row row2">
+{/* <td>
+    <Link to={pathLink}>{Message.id}</Link>
+</td> */}
+<td>{Message.FullName}</td>
+<td>{Message.Phone}</td>
 <td>{Message.Email}</td>
 <td>{Message.Date}</td>
+<td><ActionButton /></td>
     </tr>
     })}
     </>

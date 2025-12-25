@@ -5,7 +5,7 @@ import FilterBar from '../Components/Layout/FilterBar';
 import './Inbox.css';
 
 const Inbox = () => {
-    return ( <div className='body_div2'>
+    return ( <div className='body_div3'>
      <SideNav />
       <div className='projects-content'>
         <FilterBar />

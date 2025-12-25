@@ -19,7 +19,7 @@ const TableRow = ({project}) => {
                 }  
                 getAllProjects();
             },[]);
-if (loading) return <p>Loading...</p>;
+// if (loading) return <p>Loading...</p>;
     return ( <>
          {console.log(Projects)}
         {
@@ -29,8 +29,14 @@ if (loading) return <p>Loading...</p>;
 <img src={project.ThumbNail} alt="thumb" className="thumb_img" />
 </td>
 <td>{project.Title}</td>
-{/* <td>{project.Category}</td> */}
-<td>{project.Title}</td>
+            {/* {
+                  Projects.Category.map((c)=>{
+                   return <td>{c}</td>
+        })} */}
+        
+{Array.isArray(Project.Category) && (
+  <td>{Project.Category[0]}</td>
+)}
 <td>{project.Date}</td>
 <td>{project.id}</td>
 <td><ActionButton/></td>

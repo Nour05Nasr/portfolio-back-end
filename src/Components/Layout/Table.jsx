@@ -31,7 +31,7 @@ return (<>
 <div className="table-wrapper">
 <table>
 <thead>
-<tr>
+<tr className='head'>
 <TableTH title= 'Thumbnail' />
 <TableTH title= 'project Title' />
 <TableTH title= 'Project Category' />

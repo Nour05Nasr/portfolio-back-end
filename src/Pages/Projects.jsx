@@ -5,7 +5,7 @@ import FilterBar from '../Components/Layout/FilterBar';
 import './Projects.css';
 
 const Projects = () => {
-    return ( <div className='body_div2'>
+    return ( <div className='body_div3'>
      <SideNav />
       <div className='projects-content'>
         <FilterBar />

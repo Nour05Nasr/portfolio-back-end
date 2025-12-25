@@ -22,14 +22,6 @@ const Table2 = ({Category}) => {
                     }  
                     getAllCategories();
                 },[]);
-//     const categories = [
-// { id: "01", title: "UI/UX Design", projects: "03", thumbnail:{logo} },
-// { id: "05", title: "Graphic Design", projects: "03", thumbnail: {logo} },
-// { id: "01", title: "UI/UX Design", projects: "03", thumbnail: {logo} },
-// { id: "01", title: "UI/Motion Graphics", projects: "03", thumbnail: {logo} },
-// { id: "05", title: "Graphic Design", projects: "03", thumbnail: {logo} },
-// { id: "06", title: "Art Direction", projects: "03", thumbnail: {logo} }
-// ];
 return (
 <div className="table-container">
 

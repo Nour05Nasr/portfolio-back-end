@@ -7,20 +7,29 @@ import FilterBar from '../Components/Layout/FilterBar';
 import './Inbox.css';
 
 const InboxSub = (params) => {
+  const [loading, setLoading] = useState(true);
   const {id} = useParams ()
-  const [Data, setData] = useState("")
+  const [Message, setMessage] = useState("")
+
   useEffect(()=> {
     async function callRow(){
       const res = await supabase.from("Messages").select("*").eq("id",id);
-      setData(res.Data[0]);
+      console.log(res.data)
+      setMessage(res.data[0]);
     }
     callRow()
   },[])
 
+  
+if (loading) return <p>Loading...</p>;
     return ( <div className='body_div2'>
      <SideNav />
-      <div className='projects-content'>
-
+      <div >
+      <td>{Message.FullName}</td>
+      <td>{Message.Phone}</td>
+      <td>{Message.Email}</td>
+      <td>{Message.Date}</td>
+      <td>{Message.Message}</td>
       </div>
     </div>);
 }

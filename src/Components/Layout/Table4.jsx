@@ -9,30 +9,20 @@ import logo from '../../Assets/logo.svg';
 import "./Table.css";
 
 const Table4 = ({Message}) => {
-           const [loading, setLoading] = useState(true);
-            const [Messages, setMessages] = useState([]); 
-    
-                useEffect(() => {
-                    
-                    async function getAllMessages() {
-                        const res = await supabase.from("Messages").select("*");
-                        setMessages(res.data)
-                        console.log(res);
-                        setLoading(false);
-                    }  
-                    getAllMessages();
-                },[]);
-//     const categories = [
-// { id: "01", title: "UI/UX Design", projects: "03", thumbnail:{logo} },
-// { id: "05", title: "Graphic Design", projects: "03", thumbnail: {logo} },
-// { id: "01", title: "UI/UX Design", projects: "03", thumbnail: {logo} },
-// { id: "01", title: "UI/Motion Graphics", projects: "03", thumbnail: {logo} },
-// { id: "05", title: "Graphic Design", projects: "03", thumbnail: {logo} },
-// { id: "06", title: "Art Direction", projects: "03", thumbnail: {logo} }
-// ];
+         const [loading, setLoading] = useState(true);
+           const [Messages, setMessages] = useState([]); 
+   
+               useEffect(() => {
+                   
+                   async function getAllMessages() {
+                       const res = await supabase.from("Messages").select("*");
+                       setMessages(res.data)
+                       console.log(res);
+                       setLoading(false);
+                   }  
+                   getAllMessages();
+               },[]);
 
-
-if (loading) return <p>Loading...</p>;
 return (
 <div className="table-container">
 
@@ -40,9 +30,8 @@ return (
 <table>
 <thead>
 <tr>
-<TableTH title= 'First Name' />
-<TableTH title= 'Last Name' />
-<TableTH title= 'Subject' />
+<TableTH title= 'Full Name' />
+<TableTH title= 'Number' />
 <TableTH title= 'E-mail' />
 <TableTH title= 'Date' />
 {/* <button className="add-project-btn"><Plus size={18} />Add Category</button> */}

@@ -14,7 +14,7 @@ const ActionButton = (props) => {
     return ( 
             <div className="action-buttons">
                 <button className="action-button"><Eye size={18} /></button>
-                <Link className='action-button' to={"/ProjectEditor/"+3}>
+                <Link className='action-button' to={"/ProjectEditor/:id"+3}>
                 <button><Edit size={18} /></button>
                 </Link>
                 {/* <button onClick={()=>deleteRow(m.id)} className="action-button delete"><Trash2 size={18} /></button> */}

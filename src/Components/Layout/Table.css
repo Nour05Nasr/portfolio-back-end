@@ -5,14 +5,17 @@ table {
 }
 
 .table-container {
-  width: 100%;
-  max-height: 60vh; 
+  /* width: 100%; */
+  max-height: 80vh; 
   overflow-y: auto;      
   overflow-x: hidden;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: contain;
   border-radius: 10px;
   padding: 2% 0;
   background: rgba(176, 176, 176, 0.2);
   backdrop-filter: blur(5px);
+  /* background-color: blue; */
 }
 
 /* .portfolio-table thead th {
@@ -22,13 +25,9 @@ table {
   background: #f1f1f1;
 } */
 
-.table-container {
-  scroll-behavior: smooth;
-}
-
 .table-container::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 8px;
+  height: 8px;
 }
 
 .table-container::-webkit-scrollbar-track {
@@ -78,6 +77,10 @@ table {
   gap: 6px;
 }
 
+.head{
+  
+}
+
 @media (max-width: 1024px) {
     .portfolio-table th,
   .portfolio-table td {
@@ -112,4 +115,11 @@ table {
     width: 100%;
     font-size: 14px;
   }
+
+  .table-container {
+    max-height: none;
+    overflow-y: visible;
+    overflow-x: auto;
+  }
 }
+
