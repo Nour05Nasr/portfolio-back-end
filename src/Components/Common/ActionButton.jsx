@@ -34,15 +34,15 @@ const ActionButton = (props) => {
                 <Link to={"/ProjectEditor/" + id}> 
                     <button className='action-button'><Edit size={18} /></button>
                 </Link>
-                {/* {Messages.map((m)=>{
+                {Messages.map((m)=>{
                     return  <button onClick={()=>deleteRow(m.id)}  className="action-button delete"><Trash2 size={18} /></button>
-                })} */}
-                  <button
+                })}
+                  {/* <button
     onClick={() => deleteRow(Messages.id)}
     className="action-button delete"
   >
     <Trash2 size={18} />
-  </button>
+  </button> */}
             </div>
 );
 }
