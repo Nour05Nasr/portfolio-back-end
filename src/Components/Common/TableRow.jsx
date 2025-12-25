@@ -2,7 +2,6 @@ import React, { Component, useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import { supabase } from '../../Supabase';
 import ActionButton from './ActionButton';
-import logo from '../../Assets/logo.svg';
 import { Eye, Edit, Trash2 } from "lucide-react";
 import "./TableRow.css";
 
@@ -47,7 +46,7 @@ const TableRow = ({project}) => {
 <td>{Project.id}</td>
 <td>
     <div className='action-buttons'>
-    <Link to={"/ProjectEditor/" + Project.id}>
+    <Link to={"/ProjectViewer/" + Project.id}>
         <button className='action-button'><Eye size={18} /></button>
     </Link>
     <Link to={"/ProjectEditor/" + Project.id}>

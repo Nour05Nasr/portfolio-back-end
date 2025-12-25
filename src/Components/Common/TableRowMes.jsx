@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import { supabase } from '../../Supabase';
 import ActionButton from './ActionButton';
 import { Eye, Edit, Trash2 } from "lucide-react";
-import logo from '../../Assets/logo.svg';
 import "./TableRow.css";
 
 const TableRowMes = ({Message}) => {
