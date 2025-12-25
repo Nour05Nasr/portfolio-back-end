@@ -190,23 +190,6 @@ const Profile = () => {
         onChange={() => handleToggle("signout")}
       />
 
-      <Toggle
-        label="000"
-        checked={settings.newsletter}
-        onChange={() => handleToggle("delete")}
-      />
-
-      <Toggle
-        label="Light Mode"
-        checked={settings.lightMode}
-        onChange={() => handleToggle("lightMode")}
-      />
-
-      <Toggle
-        label="Delete messages automatically after 30 days"
-        checked={settings.newsletter}
-        onChange={() => handleToggle("delete")}
-      />
             </div>
     
             </div>

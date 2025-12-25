@@ -2,6 +2,7 @@ import React, { Component, useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
 import { supabase } from '../../Supabase';
 import ActionButton from './ActionButton';
+import { Eye, Edit, Trash2 } from "lucide-react";
 import logo from '../../Assets/logo.svg';
 import "./TableRow.css";
 
@@ -27,14 +28,14 @@ if (loading) return <p>Loading...</p>;
  Messages.map((Message) =>{
     // let pathLink = "/messages-details/" + Message.id;
     return <tr key={Message.id}  className="table-row row2">
-{/* <td>
-    <Link to={pathLink}>{Message.id}</Link>
-</td> */}
 <td>{Message.FullName}</td>
 <td>{Message.Phone}</td>
 <td>{Message.Email}</td>
 <td>{Message.Date}</td>
-<td><ActionButton /></td>
+    <Link to={"/InboxSub/" + Message.id}>
+<button className='action-button'><Eye size={18} /></button>
+    </Link>
+{/* <td><ActionButton /></td> */}
     </tr>
     })}
     </>
