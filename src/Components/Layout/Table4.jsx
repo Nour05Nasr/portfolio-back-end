@@ -17,7 +17,7 @@ const Table4 = ({Message}) => {
                    async function getAllMessages() {
                        const res = await supabase.from("Messages").select("*");
                        setMessages(res.data)
-                       console.log(res);
+                    //    console.log(res);
                        setLoading(false);
                    }  
                    getAllMessages();

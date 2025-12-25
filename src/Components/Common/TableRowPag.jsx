@@ -21,7 +21,7 @@ const TableRowPag = ({Page}) => {
             },[]);
 if (loading) return <p>Loading...</p>;
     return ( <>
-         {console.log(Pages)}
+         {/* {console.log(Pages)} */}
         {
          Pages.map((Page) =>{
             return <tr className="table-row row2">

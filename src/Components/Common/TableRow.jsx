@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom';
 import { supabase } from '../../Supabase';
 import ActionButton from './ActionButton';
 import logo from '../../Assets/logo.svg';
+import { Eye, Edit, Trash2 } from "lucide-react";
 import "./TableRow.css";
 
 const TableRow = ({project}) => {
@@ -19,16 +20,21 @@ const TableRow = ({project}) => {
                 }  
                 getAllProjects();
             },[]);
+
+                async function deleteRow(id) {
+                    const res = await supabase.from("Projects").delete().eq("id",id)
+                }
+
 // if (loading) return <p>Loading...</p>;
     return ( <>
-         {console.log(Projects)}
+         {/* {console.log(Projects)} */}
         {
          Projects.map((Project) =>{
             return <tr className="table-row row2">
 <td>
-<img src={project.ThumbNail} alt="thumb" className="thumb_img" />
+<img src={Project.ThumbNail} alt="thumb" className="thumb_img" />
 </td>
-<td>{project.Title}</td>
+<td>{Project.Title}</td>
             {/* {
                   Projects.Category.map((c)=>{
                    return <td>{c}</td>
@@ -37,9 +43,20 @@ const TableRow = ({project}) => {
 {Array.isArray(Project.Category) && (
   <td>{Project.Category[0]}</td>
 )}
-<td>{project.Date}</td>
-<td>{project.id}</td>
-<td><ActionButton/></td>
+<td>{Project.Date}</td>
+<td>{Project.id}</td>
+<td>
+    <div className='action-buttons'>
+    <Link to={"/ProjectEditor/" + Project.id}>
+        <button className='action-button'><Eye size={18} /></button>
+    </Link>
+    <Link to={"/ProjectEditor/" + Project.id}>
+        <button className='action-button'><Edit size={18} /></button>
+    </Link>
+     <button onClick={()=>deleteRow(Project.id)}  className="action-button delete"><Trash2 size={18} /></button>
+    </div>
+</td>
+{/* <td><ActionButton/></td> */}
 </tr>
             })}
     </>

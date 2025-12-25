@@ -17,7 +17,7 @@ const Table3 = ({Page}) => {
                     async function getAllPages() {
                         const res = await supabase.from("Pages").select("*");
                         setPages(res.data)
-                        console.log(res);
+                        // console.log(res);
                         setLoading(false);
                     }  
                     getAllPages();
