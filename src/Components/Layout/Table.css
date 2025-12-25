@@ -5,47 +5,111 @@ table {
 }
 
 .table-container {
-    width: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-    padding: 2% 0; 
-    background: rgba(176, 176, 176, 0.20);
-    backdrop-filter: blur(5px);
+  width: 100%;
+  max-height: 60vh; 
+  overflow-y: auto;      
+  overflow-x: hidden;
+  border-radius: 10px;
+  padding: 2% 0;
+  background: rgba(176, 176, 176, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+/* .portfolio-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #f1f1f1;
+} */
+
+.table-container {
+  scroll-behavior: smooth;
+}
+
+.table-container::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .portfolio-table th {
-background: #f1f1f1;
-text-align: left;
-padding: 14px;
-font-weight: 600;
-font-size: 14px;
-color: #333;
+  background: #f1f1f1;
+  text-align: left;
+  padding: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
 }
 
 .portfolio-table td {
-padding: 14px;
-border-bottom: 1px solid #e6e6e6;
-font-size: 14px;
-color: #555;
+  padding: 14px;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 14px;
+  color: #555;
 }
-
 
 .portfolio-table tr:last-child td {
-border-bottom: none;
+  border-bottom: none;
 }
 
-.add-project-btn{
-    width: 140px;
-    /* padding: 4px 24px; */
-    border-radius: 20px;
-    color: var(--bg_color);
-    font-family: var(--font_2);
-    font-size: 16px;
-    font-weight: 600;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 3%;
+.add-project-btn {
+  width: 140px;
+  border-radius: 20px;
+  color: var(--bg_color);
+  font-family: var(--font_2);
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 }
 
+@media (max-width: 1024px) {
+    .portfolio-table th,
+  .portfolio-table td {
+    font-size: 13px;
+    padding: 12px;
+  }
+
+    .add-project-btn {
+    width: 130px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+ .table-container {
+    overflow-x: auto;
+    /* overflow-y: hidden; */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  table {
+    min-width: 700px;
+  }
+  
+  .portfolio-table th,
+  .portfolio-table td {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+    .add-project-btn {
+    width: 100%;
+    font-size: 14px;
+  }
+}

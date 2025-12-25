@@ -29,9 +29,9 @@ return (
 <table>
 <thead>
 <tr>
-<TableTH title= 'Thumbnail' />
 <TableTH title= 'Page Title' />
 <TableTH title= 'Number of projects' />
+<TableTH title= 'Last Edited' />
 <button className="add-project-btn"><Plus size={18} />Add Page</button>
 </tr>
 </thead>

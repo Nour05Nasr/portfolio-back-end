@@ -1,11 +1,33 @@
-import React, { Component, useState } from 'react';
+import React, { Component, useEffect, useState } from 'react';
 import SideNav from '../Components/Layout/SideNav';
+import {Link} from 'react-router-dom';
+import { supabase } from '../Supabase';
+import {useParams} from 'react-router-dom'
 import upload from '../Assets/upload.svg';
 import './ProjectEditor.css';
 
 const ProjectEditor = () => {
+            const [loading, setLoading] = useState(true);
+            
+            const {id} = useParams();
+            const[data, setData] = useState();
+            // const [Projects, setProjects] = useState(); 
+    
+                useEffect(() => {
+                    
+                    async function getAllProjects(id) {
+                        const res = await supabase.from("Projects").select("*");
+                        setData(res.data[0])
+                        // console.log(res);
+                        setLoading(false);
+                    }  
+                    getAllProjects();
+                },[]);
+
+                if (loading) return <p>Loading...</p>;
 return (
-<div className='body_div2'>
+    <div className='body_div2'>
+    {console.log(data.id)}
     <SideNav />
     <div className='body_div'>
 

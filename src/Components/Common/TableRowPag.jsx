@@ -26,8 +26,8 @@ if (loading) return <p>Loading...</p>;
          Pages.map((Page) =>{
             return <tr className="table-row row2">
 <td>{Page.Title}</td>
-<td>{Page.Name}</td>
 <td>{Page.Number_of_sections}</td>
+<td>{Page.History}</td>
 <td><ActionButton /></td>
 </tr>
             })}

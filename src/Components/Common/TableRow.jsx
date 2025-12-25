@@ -33,7 +33,7 @@ if (loading) return <p>Loading...</p>;
 <td>{project.Title}</td>
 <td>{project.Date}</td>
 <td>{project.id}</td>
-<td><ActionButton /></td>
+<td><ActionButton/></td>
 </tr>
             })}
     </>

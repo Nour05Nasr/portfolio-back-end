@@ -26,7 +26,7 @@ const RoutingApp = () => {
         <Route path="/Profile" element={<Profile />} />
         <Route path="/Inbox" element={<Inbox />} />
         <Route path="/InboxSub/:id" element={<InboxSub />} />
-        <Route path="/ProjectEditor" element={<ProjectEditor />} />
+        <Route path="/ProjectEditor/:id" element={<ProjectEditor />} />
 
         <Route path="*" element={<Error404 />} />
     </Routes>
