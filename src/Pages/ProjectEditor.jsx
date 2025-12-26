@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 import { supabase } from '../Supabase';
 import {useParams} from 'react-router-dom'
 import upload from '../Assets/upload.svg';
+import Button from '../Components/Common/Button';
 import './ProjectEditor.css';
 
 const ProjectEditor = () => {
@@ -12,6 +13,10 @@ const ProjectEditor = () => {
             const {id} = useParams();
             const [Projects, setProjects] = useState([]); 
             const [Tools, setTools] = useState([]); 
+            const [Title, setTitle] = useState(""); 
+            // const [Tools, setTools] = useState([]); 
+            // const [Tools, setTools] = useState([]); 
+            // const [Tools, setTools] = useState([]); 
     
 
 useEffect(() => {
@@ -27,6 +32,9 @@ useEffect(() => {
   callProjects();
 }, [id]);
 
+ async function save() {
+    console.log("jbgfv")
+  }
 
 useEffect(() => {
   async function callTools() {
@@ -72,7 +80,7 @@ return (
 
         <form action="">
             <lable className='title1 bottom'>Project Title</lable>
-            <input className='card1 login_p' type='text' value={Projects.Title} />
+            <input className='card1 login_p' type='text' value={Title} />
         </form>
 
         <form action="">
@@ -105,6 +113,12 @@ return (
                 <p className='login_p'>PNG, JPG and GIF files are allowed</p>
             </div>
         </form>
+
+        {/* <div className='card_row'>
+        <Button onClick={save} className='' title="Cancle"/>
+        <Button onClick={save} className='' title="Save"/>
+        </div> */}
+        <Button onClick={save} title="Save"/>
     </div>
         </div>);
  }

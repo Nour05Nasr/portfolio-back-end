@@ -43,7 +43,7 @@ const LogIn = () => {
         <Button url='/Dashboard' title='Log In'/>
     </div>
     <div className='video'>
-    <video className='mask2 video' autostart autoplay loop src={bgvideo}></video>
+    {/* <video className='mask2 ' autostart autoplay loop src={bgvideo}></video> */}
     </div>
     {/* </div> */}
     </div> );
